@@ -10,6 +10,11 @@ const fs = require("fs"),
   errorhandler = require("errorhandler"),
   mongoose = require("mongoose");
 
+ 
+mongoose.connect(process.env.MONGODB_URI,
+  'mongodb://localhost/api')
+ 
+
 const mongoConnect = require("./db/database");
 
 const isProduction = process.env.NODE_ENV === "production";
